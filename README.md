@@ -20,7 +20,7 @@ Repository provides iso image that should be flashed on the usb drive.
  
 ```
 1. install qemu
-2. qemu-img convert dosiOS-2102.iso -O raw dosiOS-2102.img
+2. qemu-img convert dosios2102.iso -O raw dosiOS-2102.img
 3. dd if=dosiOS-2102.img of=/dev/sdX
 ```
 
@@ -61,15 +61,15 @@ ecp == Edge Computing Platform
 System:
 
 ```
-Login: dosiOS-2102
-Password: dosiOS-2102
+Login: dosios2102
+Password: dosios2102
 ```
 
 Grub:
 
 ```
-Login: dosiOS-2102
-Password: dosiOS-2102
+Login: dosios2102
+Password: dosios2102
 ```
 
 #### Port identification and mapping
