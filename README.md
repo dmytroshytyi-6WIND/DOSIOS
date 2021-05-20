@@ -15,7 +15,7 @@ To modify value in dosiOS (epc part of the tree) you need first to delete curren
  
 Repository provides iso image that should be flashed on the usb drive.
  
-```Steps for installation
+```
 1. install qemu
 2. qemu-img convert dosiOS-2102.iso -O raw dosiOS-2102.img
 3. dd if=dosiOS-2102.img of=/dev/sdX
@@ -23,8 +23,7 @@ Repository provides iso image that should be flashed on the usb drive.
 
 After booting from usb drive you will be in "cloud image" of dosiOS.
 
-```credentials for cloud image
-
+```
 Login: tmpuser
 Passwd: tmppwd
 ```
