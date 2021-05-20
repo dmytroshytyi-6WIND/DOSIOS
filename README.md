@@ -72,6 +72,30 @@ Login: dosios2102
 Password: dosios2102
 ```
 
+#### Hugetalbes configuration
+
+By default Edge Computing Platform is bootstraped with 4GB of hugetables. 
+You may have 16GB ram, thus you want to modify the amount of hugetables to 12GB.
+To achieve that use the command below ( 6000 x 2 = ~ 12 GB)
+
+```
+config 
+ecp general hugetables 6000
+```
+
+To display the available memory and hugetables type:
+
+```
+show ecp memory free-hugetables
+```
+
+To display the RAM status type:
+
+```
+show ecp memory free-memory
+```
+
+
 #### Port identification and mapping
 
 This command helps to identify the connected NICs. Node address + kernel driver (igb)
@@ -116,6 +140,20 @@ set ecp vms sf1 cpu 5
 set ecp vms sf1 ram 4
 set ecp vms sf1 devices 1 drive drive-type disk
 set ecp vms sf1 devices 1 drive file 'http://10.0.0.2/vRouter.qcow2'
+```
+
+### Access to Service Functions
+
+To list active Service Function type:
+
+```
+ecp vm-list
+```
+
+To access virtual serial console of Service Function type:
+
+```
+vm-console $SF_NAME
 ```
 
 #### vswitch configuration
