@@ -1,4 +1,4 @@
-## Welcome to dosiOS Page - Edge Computin Platform
+## Welcome to dosiOS Page - Edge Computing Platform
 
 Create your service functions, chain them with virtual switches and physical ports of equipment. Accelerate packet exchange with DPDK.
 
