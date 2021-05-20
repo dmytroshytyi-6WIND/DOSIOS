@@ -36,13 +36,13 @@ dosiOS will be installed on the /dev/sdb by default.
 
 You may install dosiOS on the hard drive with the next command:
 
-```dosiOS installation on hard drive
+```
 tmpuser@node:$ install image
 ```
 
 Script of installation will be triggered:
 
-```dosiOS installation scenario
+```
 select conf file "/config/config.boot"
 select console ttyS0
 select the console speed 115200
@@ -57,14 +57,14 @@ ecp == Edge Computing Platform
 
 System:
 
-```credentials system
+```
 Login: dosiOS-2102
 Password: dosiOS-2102
 ```
 
 Grub:
 
-```credentials grub
+```
 Login: dosiOS-2102
 Password: dosiOS-2102
 ```
@@ -73,19 +73,19 @@ Password: dosiOS-2102
 
 This command helps to identify the connected NICs. Node address + kernel driver (igb)
 
-```port list
+```
 ecp list-nic-pci
 ```
 
 To identify phy port of the NIC use this command (the phy port will be blinking):
 
-```port ident
+```
 ecp blink-port 0000:0a:00.0 igb // igb kernel driver for 1G NICs (check ecp list-nic-pci)
 ```
 
 Next step to map ports to addresses:
 
-```port mapping
+```
 configure
 set ecp interfaces vfpX pci-addr 0000:0a.00.0
 ```
@@ -93,20 +93,20 @@ set ecp interfaces vfpX pci-addr 0000:0a.00.0
 #### 2 types of interfaces
 
 The interfaces below represent physical ports of the equipment 
-```port mapping
+```
 /ecp/intefaces
 ```
 
 The interfaces below represent virtual mgmnt ports connected with representation of physical ports (on the same link) 
 They apper when representation of physical ports is configured on the switch. 
 
-```port mapping
+```
 /interfaces/dataplane/dp0pX
 ```
 
 #### Service function configuration
 
-```sf config
+```
 config
 set ecp vms sf1 boot-from hd
 set ecp vms sf1 cpu 5
@@ -120,7 +120,7 @@ set ecp vms sf1 devices 1 drive file 'http://10.0.0.2/vRouter.qcow2'
 Add physical port to switch. When the physical port added to switch, you will find new interface dp0pX in the /root/interfaces/dataplane. 
 This dp0pX is configured for management. Confirm that it was configured by 
 
-```add phy port and service function to switch
+```
 set ecp switches sw1 ports 1 interface vfp1
 set ecp switches sw1 ports 2 vm sf1
 set ecp switches sw1 ports 2 vm-port 1
