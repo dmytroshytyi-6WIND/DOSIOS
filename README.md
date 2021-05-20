@@ -21,6 +21,7 @@ Repository provides iso image that should be flashed on the usb drive.
 3. dd if=dosiOS-2102.img of=/dev/sdX
 ```
 After booting from usb drive you will be in "cloud image" of dosiOS.
+
 ```credentials for cloud image
 
 Login: tmpuser
@@ -38,6 +39,7 @@ You may install dosiOS on the hard drive with the next command:
 ```dosiOS installation on hard drive
 tmpuser@node:$ install image
 ```
+
 Script of installation will be triggered:
 
 ```dosiOS installation scenario
@@ -66,7 +68,6 @@ Grub:
 Login: dosiOS-2102
 Password: dosiOS-2102
 ```
-
 
 #### Port identification and mapping
 
