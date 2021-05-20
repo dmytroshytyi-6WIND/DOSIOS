@@ -1,5 +1,7 @@
 ## Welcome to dosiOS Page - Edge Computing Platform
 
+[![Join the chat at https://gitter.im/dmytroshytyi/dosiOS](https://badges.gitter.im/dmytroshytyi/dosiOS.svg)](https://gitter.im/dmytroshytyi/dosiOS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Create your service functions, chain them with virtual switches and physical ports of equipment. Accelerate packet exchange with DPDK.
 
 Use NETCONF protocol and YANG modelisation language for dosiOS management. Perform identification and physical port mapping on initial setup with provided toolkits.
