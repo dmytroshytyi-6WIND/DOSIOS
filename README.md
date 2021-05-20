@@ -1,4 +1,4 @@
-## Welcome to dosiOS Page - Edge Computin Platform with free access.
+## Welcome to dosiOS Page - Edge Computin Platform
 
 Create your service functions, chain them with virtual switches and physical ports of equipment. Accelerate packet exchange with DPDK.
 
