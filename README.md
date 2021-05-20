@@ -20,6 +20,7 @@ Repository provides iso image that should be flashed on the usb drive.
 2. qemu-img convert dosiOS-2102.iso -O raw dosiOS-2102.img
 3. dd if=dosiOS-2102.img of=/dev/sdX
 ```
+
 After booting from usb drive you will be in "cloud image" of dosiOS.
 
 ```credentials for cloud image
