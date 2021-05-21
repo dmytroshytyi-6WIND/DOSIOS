@@ -14,6 +14,21 @@ Available release is ALPHA version available for comments/issues/improvements.
 
 To modify value in dosiOS (epc part of the tree) you need first to delete current value and after set new value. Modification of values not guaranteed and can lead to errors in current stage.
 
+### Downloading
+
+#### Link to download
+
+Link to download the iso image is presented below
+```
+https://mega.nz/file/Ec8AwDrR
+```
+
+#### Decryption key (will be asked when start file download)
+
+```
+ECn6pY08iLFaEN1mb5Y7jquCuPJyEXXoOP1ZRm2a4w4
+```
+
 ### Installation
  
 Repository provides iso image that should be flashed on the usb drive.
