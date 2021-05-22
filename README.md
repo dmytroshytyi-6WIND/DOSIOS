@@ -20,13 +20,13 @@ To modify value in dosiOS (epc part of the tree) you need first to delete curren
 
 Link to download the iso image is presented below
 ```
-https://mega.nz/file/YFdBBIbC
+https://mega.nz/file/wZ0xTCRT
 ```
 
 #### Decryption key (will be asked when start file download)
 
 ```
-IePWB2Hc5q15xgqTCZKlp_DQ7w1TPk4TIamrRYc5Q3c
+FSzsAX3Q3smdFvMRfcBo_0NESNc3SkBQiFGotGPaaig
 ```
 
 ### Installation
