@@ -29,6 +29,10 @@ https://mega.nz/file/wZ0xTCRT
 FSzsAX3Q3smdFvMRfcBo_0NESNc3SkBQiFGotGPaaig
 ```
 
+### DEMO
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/pRe4JbJ_eOI/0.jpg)](https://www.youtube.com/watch?v=pRe4JbJ_eOI)
+
 ### Installation
  
 Repository provides iso image that should be flashed on the usb drive.
@@ -146,7 +150,7 @@ They apper when representation of physical ports is configured on the switch.
 /interfaces/dataplane/dp0pX
 ```
 
-#### Service function configuration
+#### Service function configuration (qcow2 image)
 
 ```
 config
@@ -155,6 +159,17 @@ set ecp vms sf1 cpu 5
 set ecp vms sf1 ram 4
 set ecp vms sf1 devices 1 drive drive-type disk
 set ecp vms sf1 devices 1 drive file 'http://10.0.0.2/vRouter.qcow2'
+```
+
+#### Service function configuration (iso image)
+
+```
+config
+set ecp vms sf1 boot-from hd
+set ecp vms sf1 cpu 5
+set ecp vms sf1 ram 4
+set ecp vms sf1 devices 1 drive drive-type cdrom
+set ecp vms sf1 devices 1 drive file 'http://10.0.0.2/vRouter.iso'
 ```
 
 ### Access to Service Functions
