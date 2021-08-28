@@ -197,26 +197,29 @@ set ecp switches sw1 ports 2 vm sf1
 set ecp switches sw1 ports 2 vm-port 1
 ```
 
-### dosiOS IPERF test
+### dosiOS IPERF3 test
 
 Conditions:
 
 ```
+
+VM(vRouter) - sw1 - VM(vRouter)
+```
+
+Result
+
+![dosiOS benchmark](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosiOS-VM-to-VM-performance.png)
+
+
+
+```
+
 Traffic generator -- eth1(1G) -- sw1 -- sf(router1) -- sw2 -- sf(router2) -- sw3 -- eth10(1G) -- Traffic generator
-```
-
-```
-"Router 1" with 2 ports with static routes:
-192.168.1.2
-192.168.2.2
-```
-
-```
-"Router 2" with 2 ports with static routes:
-192.168.2.3
-192.168.3.3
 ```
 
 Result 
 
 ![dosiOS benchmark](https://github.com/dmytroshytyi/dosiOS/blob/main/dosiOS-bench.PNG?raw=true)
+
+
+
