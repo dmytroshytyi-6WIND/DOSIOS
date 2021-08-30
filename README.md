@@ -216,7 +216,7 @@ VM(vRouter) - sw1 - VM(vRouter)
 
 Result
 
-![dosiOS benchmark](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosiOS-VM-to-VM-performance.png)
+![dosiOS benchmark](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosiOS-VM-to-VM-performance.png?raw=true)
 
 
 
