@@ -19,11 +19,19 @@ To modify value in dosiOS (epc part of the tree) you need first to delete curren
 #### Link to download
 
 Link to download the iso image is presented below
+
+Date 30/08/2021_17:50
+
+```
+https://www.dropbox.com/s/3z6bjpv1hirydl0/dosios-2102.iso?dl=1
+```
+
+
 ```
 https://mega.nz/file/pMtUUDII
 ```
 
-#### Decryption key (will be asked when start file download)
+#### Decryption key (will be asked when start MEGA file download)
 
 ```
 qcesj4PaNug7EWxn8puJAN_RZWcQ4rzljRdQVs3BCCY
@@ -222,4 +230,10 @@ Result
 ![dosiOS benchmark](https://github.com/dmytroshytyi/dosiOS/blob/main/dosiOS-bench.PNG?raw=true)
 
 
+### Changelog
 
+#### Date 30/08/2021_17:50
+
+1. Added Multiqueue configuration of the VNF and of the OVS.
+2. Fixed multiple VNFs spawning at the same moment issue.
+3. Added "commit failure/rollback" if VNF spawning isn't successfull (not enough memory, empty image, wrong link, etc..) 
