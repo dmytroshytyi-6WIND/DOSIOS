@@ -43,7 +43,7 @@ qcesj4PaNug7EWxn8puJAN_RZWcQ4rzljRdQVs3BCCY
 
 ### DEMO #2 
 
-[![IMAGE ALT TEXT HERE](https://www.youtube.com/watch?v=T1cC2j_oey4)](https://www.youtube.com/watch?v=T1cC2j_oey4)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/T1cC2j_oey4/maxresdefault.jpg)](https://www.youtube.com/watch?v=T1cC2j_oey4)
 
 ### Installation
  
