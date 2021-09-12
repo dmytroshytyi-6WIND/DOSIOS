@@ -45,6 +45,10 @@ qcesj4PaNug7EWxn8puJAN_RZWcQ4rzljRdQVs3BCCY
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/T1cC2j_oey4/maxresdefault.jpg)](https://www.youtube.com/watch?v=T1cC2j_oey4)
 
+### Configuration of dosiOS from NSO controller
+
+We provide a Cisco NSO package [located in this repo](https://github.com/dmytroshytyi/dosiOS-mngt-by-Cisco-NSO) to controll dosiOS software from CISCO NSO controller via [ietf-ucpe-yang modules](https://github.com/dmytroshytyi/ucpe-ietf)
+
 ### Installation
  
 Repository provides iso image that should be flashed on the usb drive.
