@@ -45,9 +45,6 @@ qcesj4PaNug7EWxn8puJAN_RZWcQ4rzljRdQVs3BCCY
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/T1cC2j_oey4/maxresdefault.jpg)](https://www.youtube.com/watch?v=T1cC2j_oey4)
 
-### Configuration of dosiOS from NSO controller
-
-We provide a Cisco NSO package [located in this repo](https://github.com/dmytroshytyi/dosiOS-mngt-by-Cisco-NSO) to controll dosiOS software from CISCO NSO controller via [ietf-ucpe-yang modules](https://github.com/dmytroshytyi/ucpe-ietf)
 
 ### Installation
  
@@ -87,11 +84,16 @@ select the console speed 115200
 Disk label: gpt
 ```
 
-### dosiOS configuration
+### Configuration of dosiOS from NSO controller
+
+We provide a Cisco NSO package [located in this repo](https://github.com/dmytroshytyi/dosiOS-mngt-by-Cisco-NSO) to controll dosiOS software from CISCO NSO controller via [ietf-ucpe-yang modules](https://github.com/dmytroshytyi/ucpe-ietf)
+
+
+### dosiOS manual configuration
 
 ecp == Edge Computing Platform
 
-### Login/Password for installed system:
+#### Login/Password for installed system:
 
 System:
 
@@ -211,6 +213,55 @@ This dp0pX is configured for management. Confirm that it was configured by
 set ecp switches sw1 ports 1 interface vfp1
 set ecp switches sw1 ports 2 vm sf1
 set ecp switches sw1 ports 2 vm-port 1
+```
+### Configuration types and (supported)/(not_supported) commands
+
+Configuration may be done via the CREATE, DELETE, CHANGE operations. Some of them supported more than anothers in current version.
+
+#### CREATE
+
+Most of creation commands except "cvlans" work as expected:
+
+Exception:
+
+```
+"cvlans" accepts only 1 cVLAN.
+set ecp switches swDOSIOS ports 1 cvlans X
+If:
+1. CREATE ecp switches sw ports port X vm-port Y
+2. Forget to specify "CREATE ecp switches sw ports port X vm Z"
+3. When do 'commit" => fail
+```
+
+
+#### DELETE
+
+MOST of deletion commands work as expected with reserve that CHANGES commands were not used.
+
+Excaption:
+
+```
+1. DELETE ecp switches sw ports port X => success 
+but if:
+1. DELETE ecp switches sw ports port X vm-port Y
+2. DELETE ecp switches sw ports port X vm Z
+3. DELETE ecp switches sw ports port X => fail
+```
+
+#### CHANGE
+
+This operation is a bit touchy. Some code modification currently under revision to support mode commands with CHANGE operation. 
+
+```
+CHANGE set ecp switches sw ports port X vm+port             => success 
+CHANGE set ecp switches sw ports port X vm port1 -> port2   => fail 
+CHANGE set ecp switches sw ports port X port-mode           => success 
+CHANGE set ecp switches sw ports port X tag                 => success 
+CHANGE set ecp switches sw ports port X stacked-mode        => success 
+CHANGE set ecp switches sw ports port X n-txq               => success 
+CHANGE set ecp switches sw ports port X n-rxq               => success 
+CHANGE set ecp switches sw ports port X interface           => fail 
+
 ```
 
 ### dosiOS IPERF3 test
