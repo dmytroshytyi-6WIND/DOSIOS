@@ -20,6 +20,27 @@ To modify value in dosiOS (epc part of the tree) you need first to delete curren
 
 Link to download the iso image is presented below
 
+Date 19/09/2021_21:44
+
+```
+https://www.dropbox.com/s/l8hyhnehrshlkz0/dosios-2102.iso?dl=1
+```
+
+Changes:
+
+
+```
+Fixed restrictions in the YANG model.
+Fixed commands to interact with OVS.
+
+1. fixed CNAHGE operation: set port interface X
+2. fixed CHANGE operation: set port vm-port X
+3. fixed CHANGE operation: set port vm-port X => set port interface Y
+4. fixed DELETE operation: del port vm-port X
+5. fixed DELETE operation: del port vm X
+6. fixed DELETE operation: del port X
+```
+
 Date 30/08/2021_17:50
 
 ```
@@ -147,7 +168,7 @@ To identify phy port of the NIC use this command (the phy port will be blinking)
 ecp blink-port 0000:0a:00.0 igb // igb kernel driver for 1G NICs (check ecp list-nic-pci)
 ```
 
-Next step to map ports to addresses:
+Next step to map pofixed DELETE operation: del port vm-port Xrts to addresses:
 
 ```
 configure
@@ -226,27 +247,11 @@ Exception:
 
 ```
 "cvlans" accepts only 1 cVLAN.
-set ecp switches swDOSIOS ports 1 cvlans X
-If:
-1. CREATE ecp switches sw ports port X vm-port Y
-2. Forget to specify "CREATE ecp switches sw ports port X vm Z"
-3. When do 'commit" => fail
-```
-
 
 #### DELETE
 
 MOST of deletion commands work as expected with reserve that CHANGES commands were not used.
 
-Excaption:
-
-```
-1. DELETE ecp switches sw ports port X => success 
-but if:
-1. DELETE ecp switches sw ports port X vm-port Y
-2. DELETE ecp switches sw ports port X vm Z
-3. DELETE ecp switches sw ports port X => fail
-```
 
 #### CHANGE
 
@@ -254,13 +259,13 @@ This operation is a bit touchy. Some code modification currently under revision 
 
 ```
 CHANGE set ecp switches sw ports port X vm+port             => success 
-CHANGE set ecp switches sw ports port X vm port1 -> port2   => fail 
+CHANGE set ecp switches sw ports port X vm port1 -> port2   => success
 CHANGE set ecp switches sw ports port X port-mode           => success 
 CHANGE set ecp switches sw ports port X tag                 => success 
 CHANGE set ecp switches sw ports port X stacked-mode        => success 
 CHANGE set ecp switches sw ports port X n-txq               => success 
 CHANGE set ecp switches sw ports port X n-rxq               => success 
-CHANGE set ecp switches sw ports port X interface           => fail 
+CHANGE set ecp switches sw ports port X interface           => success 
 
 ```
 
