@@ -12,7 +12,7 @@ Set the parameters of service function deployment (cpu, ram, ifs, disks) and vir
 
 Available release is ALPHA version available for comments/issues/improvements.
 
-To modify value in dosiOS (epc part of the tree) you need first to delete current value and after set new value. Modification of values not guaranteed and can lead to errors in current stage.
+![dosiOS gui demo](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosios2102-gui-service-chain.png?raw=true)
 
 ### Downloading
 
