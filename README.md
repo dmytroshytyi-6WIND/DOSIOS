@@ -243,10 +243,9 @@ Configuration may be done via the CREATE, DELETE, CHANGE operations. Some of the
 
 Most of creation commands except "cvlans" work as expected:
 
-Exception:
-
 ```
 "cvlans" accepts only 1 cVLAN.
+```
 
 #### DELETE
 
