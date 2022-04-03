@@ -28,8 +28,6 @@ Fixed commands to interact with OVS.
 6. fixed DELETE operation: del port X
 
 
-```
-
 #### Decryption key (will be asked when start MEGA file download)
 
 ```
