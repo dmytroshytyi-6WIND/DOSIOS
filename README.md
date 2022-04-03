@@ -14,22 +14,9 @@ Available release is ALPHA version available for comments/issues/improvements.
 
 ![dosiOS gui demo](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosios2102-gui-service-chain.png?raw=true)
 
-### Downloading
-
-#### Link to download
-
-Link to download the iso image is presented below
-
-Date 19/09/2021_21:44
-
-```
-https://www.dropbox.com/s/l8hyhnehrshlkz0/dosios-2102.iso?dl=1
-```
 
 Changes:
 
-
-```
 Fixed restrictions in the YANG model.
 Fixed commands to interact with OVS.
 
@@ -39,17 +26,8 @@ Fixed commands to interact with OVS.
 4. fixed DELETE operation: del port vm-port X
 5. fixed DELETE operation: del port vm X
 6. fixed DELETE operation: del port X
-```
 
-Date 30/08/2021_17:50
 
-```
-https://www.dropbox.com/s/3z6bjpv1hirydl0/dosios-2102.iso?dl=1
-```
-
-Date 30/05/2021_14:50
-```
-https://mega.nz/file/pMtUUDII
 ```
 
 #### Decryption key (will be asked when start MEGA file download)
