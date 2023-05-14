@@ -2,6 +2,6 @@
 sort: 3
 ---
 
-# Getting Started
+# Service Functions
 
 {% include list.liquid all=true %}
