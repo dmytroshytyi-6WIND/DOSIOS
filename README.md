@@ -1,38 +1,31 @@
-## Welcome to dosiOS Page - Edge Computing Platform
+## Welcome to DOSIOS Page - Distributed Open Software Infrastructure Operating System
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=http%3A%2F%2Fdosios.shytyi.net&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![Gitter](https://badges.gitter.im/dmytroshytyi/dosiOS.svg)](https://gitter.im/dmytroshytyi/dosiOS?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Create your service functions, chain them with virtual switches and physical ports of equipment. Accelerate packet exchange with DPDK.
+### Introduction
+Distributed Open Software Infrastructure Operating System, or DOSIOS, is a powerful and flexible operating system that is designed to meet the needs of modern network infrastructures. 
+With DOSIOS, you can easily create and deploy service functions, chain them together with virtual switches, and connect them to the physical ports of your network equipment.
 
-Use NETCONF protocol and YANG modelisation language for dosiOS management. Perform identification and physical port mapping on initial setup with provided toolkits.
-
-Set the parameters of service function deployment (cpu, ram, ifs, disks) and virtual switch configuration (trunk, access, tag, stacked-vlans).
-
-
-Available release is ALPHA version available for comments/issues/improvements.
-
-![dosiOS gui demo](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosios2102-gui-service-chain.png?raw=true)
+One of the key features of DOSIOS is its support for the Data Plane Development Kit (DPDK), which allows for accelerated packet exchange and improved performance.
+This means that your network can handle high volumes of traffic with ease, and can quickly and efficiently process data packets as they move through your network.
 
 
-Changes:
+Another important aspect of DOSIOS is its support for the NETCONF protocol and YANG modelisation language.
+This allows for easy management of your network infrastructure, and provides a standardized way to configure and manage network devices.
 
-Fixed restrictions in the YANG model.
-Fixed commands to interact with OVS.
+With DOSIOS, you can quickly and easily perform identification and physical port mapping during the initial setup phase, using the provided toolkits.
+Additionally, DOSIOS allows you to set the parameters of your service function deployment, including CPU, RAM, IFs, and disks.
+You can also configure your virtual switches with a range of options, including trunk, access, tag, and stacked VLANs.
+This gives you complete control over your network infrastructure, and allows you to customize it to meet your specific needs and requirements.
 
-1. fixed CNAHGE operation: set port interface X
-2. fixed CHANGE operation: set port vm-port X
-3. fixed CHANGE operation: set port vm-port X => set port interface Y
-4. fixed DELETE operation: del port vm-port X
-5. fixed DELETE operation: del port vm X
-6. fixed DELETE operation: del port X
+In summary, DOSIOS is a powerful and flexible operating system that provides a range of tools and features for managing and deploying network services.
+Whether you're a network administrator, an operator, a developer, or a system integrator, DOSIOS provides the tools you need to create a robust and scalable network infrastructure that can handle even the most demanding workloads.
 
 
-#### Decryption key (will be asked when start MEGA file download)
 
-```
-qcesj4PaNug7EWxn8puJAN_RZWcQ4rzljRdQVs3BCCY
-```
+![DOSIOS gui demo](https://github.com/dmytroshytyi/dosiOS-uCPE/blob/main/dosios2102-gui-service-chain.png?raw=true)
+
 
 ### DEMO #1
 
@@ -53,7 +46,7 @@ Repository provides iso image that should be flashed on the usb drive.
 3. dd if=dosiOS-2102.img of=/dev/sdX
 ```
 
-After booting from usb drive you will be in "cloud image" of dosiOS.
+After booting from usb drive you will be in "cloud image" of DOSIOS.
 
 ```
 Login: tmpuser
@@ -64,9 +57,9 @@ Confirm that your flash drive is something like /dev/sda and your hard drive is 
 
 Configuration should be performed in the BIOS (HDD priorities)
 
-dosiOS will be installed on the /dev/sdb by default.
+DOSIOS will be installed on the /dev/sdb by default.
 
-You may install dosiOS on the hard drive with the next command:
+You may install DOSIiOS on the hard drive with the next command:
 
 ```
 tmpuser@node:$ install image
@@ -81,12 +74,12 @@ select the console speed 115200
 Disk label: gpt
 ```
 
-### Configuration of dosiOS from NSO controller
+### Configuration of DOSIOS from NSO controller
 
-We provide a Cisco NSO package [located in this repo](https://github.com/dmytroshytyi/dosiOS-mngt-by-Cisco-NSO) to controll dosiOS software from CISCO NSO controller via [ietf-ucpe-yang modules](https://github.com/dmytroshytyi/ucpe-ietf)
+We provide a Cisco NSO package [located in this repo](https://github.com/dmytroshytyi/dosiOS-mngt-by-Cisco-NSO) to controll DOSIOS software from CISCO NSO controller via [ietf-ucpe-yang modules](https://github.com/dmytroshytyi/ucpe-ietf)
 
 
-### dosiOS manual configuration
+### DOSIOS manual configuration
 
 ecp == Edge Computing Platform
 
@@ -244,7 +237,7 @@ CHANGE set ecp switches sw ports port X interface           => success
 
 ```
 
-### dosiOS IPERF3 test
+### DOSIiOS IPERF3 test
 
 Conditions:
 
@@ -271,8 +264,15 @@ Result
 
 ### Changelog
 
-#### Date 30/08/2021_17:50
+Fixed restrictions in the YANG model.
+Fixed commands to interact with OVS.
 
-1. Added Multiqueue configuration of the VNF and of the OVS.
-2. Fixed multiple VNFs spawning at the same moment issue.
-3. Added "commit failure/rollback" if VNF spawning isn't successfull (not enough memory, empty image, wrong link, etc..) 
+1. fixed CNAHGE operation: set port interface X
+2. fixed CHANGE operation: set port vm-port X
+3. fixed CHANGE operation: set port vm-port X => set port interface Y
+4. fixed DELETE operation: del port vm-port X
+5. fixed DELETE operation: del port vm X
+6. fixed DELETE operation: del port X
+7. Added Multiqueue configuration of the VNF and of the OVS.
+8. Fixed multiple VNFs spawning at the same moment issue.
+9. Added "commit failure/rollback" if VNF spawning isn't successfull (not enough memory, empty image, wrong link, etc..) 
