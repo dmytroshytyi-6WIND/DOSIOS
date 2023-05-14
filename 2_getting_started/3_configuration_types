@@ -1,0 +1,36 @@
+---
+sort: 2
+---
+
+# Configuration types and (supported)/(not_supported) commands
+
+Configuration may be done via the CREATE, DELETE, CHANGE operations. Some of them supported more than anothers in current version.
+
+## CREATE
+
+Most of creation commands except "cvlans" work as expected:
+
+```
+"cvlans" accepts only 1 cVLAN.
+```
+
+## DELETE
+
+MOST of deletion commands work as expected with reserve that CHANGES commands were not used.
+
+
+## CHANGE
+
+This operation is a bit touchy. Some code modification currently under revision to support mode commands with CHANGE operation. 
+
+```
+CHANGE set ecp switches sw ports port X vm+port             => success 
+CHANGE set ecp switches sw ports port X vm port1 -> port2   => success
+CHANGE set ecp switches sw ports port X port-mode           => success 
+CHANGE set ecp switches sw ports port X tag                 => success 
+CHANGE set ecp switches sw ports port X stacked-mode        => success 
+CHANGE set ecp switches sw ports port X n-txq               => success 
+CHANGE set ecp switches sw ports port X n-rxq               => success 
+CHANGE set ecp switches sw ports port X interface           => success 
+
+```
