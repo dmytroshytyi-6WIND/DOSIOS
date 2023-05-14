@@ -7,3 +7,5 @@ sort: 3
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
 ```
+
+{% include list.liquid all=true %}

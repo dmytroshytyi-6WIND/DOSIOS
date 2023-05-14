@@ -16,3 +16,5 @@ sort: 8
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/T1cC2j_oey4/maxresdefault.jpg)](https://www.youtube.com/watch?v=T1cC2j_oey4)
 
+
+{% include list.liquid all=true %}
